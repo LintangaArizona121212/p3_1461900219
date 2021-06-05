@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\Mahasiswa;
 
 class MahasiswaController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * 
      *
      * @return \Illuminate\Http\Response
      */
@@ -39,7 +40,7 @@ class MahasiswaController extends Controller
     {
 
         $request->validate([
-            'namaMahasiswa'=>'required',
+            'NamaMahasiswa'=>'required',
             'NBIMahasiswa' => 'required',
             'angkatanMahasiswa'=>'required',
             'judulskripsiMahasiswa' => 'required',
@@ -87,7 +88,7 @@ class MahasiswaController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'namaMahasiswa'=>'required',
+            'NamaMahasiswa'=>'required',
             'NBIMahasiswa' => 'required',
             'angkatanMahasiswa'=>'required',
             'judulskripsiMahasiswa' => 'required',
@@ -96,8 +97,8 @@ class MahasiswaController extends Controller
             //'gambarMahasiswa' => 'required|image|mimes:jpg,png,jpeg'
         ]);
         $mahasiswa = Mahasiswa::find($id);
-        $mahasiswa->namaMahasiswa = $request->get('namaMahasiswa');
-        $mahasiswa->nimMahasiswa = $request->get('NBIMahasiswa');
+        $mahasiswa->NamaMahasiswa = $request->get('NamaMahasiswa');
+        $mahasiswa->NBIMahasiswa = $request->get('NBIMahasiswa');
         $mahasiswa->angkatanMahasiswa = $request->get('angkatanMahasiswa');
         $mahasiswa->judulskripsiMahasiswa = $request->get('judulskripsiMahasiswa');
         $mahasiswa->pembimbing1 = $request->get('pembimbing1');
