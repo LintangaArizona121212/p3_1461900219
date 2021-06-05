@@ -20,7 +20,7 @@ class MahasiswaController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * 
      *
      * @return \Illuminate\Http\Response
      */
@@ -30,7 +30,7 @@ class MahasiswaController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * 
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -40,7 +40,7 @@ class MahasiswaController extends Controller
 
         $request->validate([
             'namaMahasiswa'=>'required',
-            'nimMahasiswa' => 'required',
+            'NBIMahasiswa' => 'required',
             'angkatanMahasiswa'=>'required',
             'judulskripsiMahasiswa' => 'required',
             'pembimbing1'=>'required',
@@ -66,7 +66,7 @@ class MahasiswaController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * 
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -78,7 +78,7 @@ class MahasiswaController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * 
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -88,7 +88,7 @@ class MahasiswaController extends Controller
     {
         $request->validate([
             'namaMahasiswa'=>'required',
-            'nimMahasiswa' => 'required',
+            'NBIMahasiswa' => 'required',
             'angkatanMahasiswa'=>'required',
             'judulskripsiMahasiswa' => 'required',
             'pembimbing1'=>'required',
@@ -97,7 +97,7 @@ class MahasiswaController extends Controller
         ]);
         $mahasiswa = Mahasiswa::find($id);
         $mahasiswa->namaMahasiswa = $request->get('namaMahasiswa');
-        $mahasiswa->nimMahasiswa = $request->get('nimMahasiswa');
+        $mahasiswa->nimMahasiswa = $request->get('NBIMahasiswa');
         $mahasiswa->angkatanMahasiswa = $request->get('angkatanMahasiswa');
         $mahasiswa->judulskripsiMahasiswa = $request->get('judulskripsiMahasiswa');
         $mahasiswa->pembimbing1 = $request->get('pembimbing1');

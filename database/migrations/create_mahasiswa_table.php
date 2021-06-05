@@ -37,3 +37,4 @@ class CreateMahasiswasTable extends Migration
         Schema::dropIfExists('mahasiswas');
     }
 }
+
